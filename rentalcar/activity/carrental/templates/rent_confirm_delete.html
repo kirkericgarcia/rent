@@ -1,0 +1,10 @@
+{% extends 'base_template.html' %}
+{%block title%}
+Delete Rent
+{%endblock%}
+{%block content%}
+<h1>Are you sure you want to delete?</h1>
+<form method='RENT' action="{% url 'rent-delete-view' rent.id %}">
+    <button type="submit">Yes</button>
+</form>
+{%endblock%}

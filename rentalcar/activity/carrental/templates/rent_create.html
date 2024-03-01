@@ -1,0 +1,12 @@
+{% extends 'base_template.html' %}
+{% block title %} Create Rent {%endblock%}
+
+{% block content %}
+
+<h1>Form ni!</h1>
+<Form method='rent' action="{% url 'rent-create-view' %}">Rent a Car
+    {% csrf_token  %}
+    {{ form }}
+    <button type='submit'>Submit</button>
+</form>
+{%endblock%}

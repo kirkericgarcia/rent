@@ -1,0 +1,15 @@
+{% extends 'base_template.html' %}
+{% block title %}
+
+Update Rent
+{%endblock%}
+{% block content %}
+<h1>Update Rent</h1>
+<form method='rent' action="{% url 'rent-update-view' rent.id %}">
+    {%  csrf_token %}
+    {{ form }}
+    <button type="submit">Update</button>
+    <a href="{% url 'rent-delete-view' rent.id %}"> Delete</a>
+</form>
+
+{%endblock%}

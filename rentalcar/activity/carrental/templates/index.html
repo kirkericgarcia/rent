@@ -1,0 +1,14 @@
+{% extends 'base_template.html' %}
+
+{% block title %}
+My Application
+{% endblock %}
+
+{%block content%}
+<h1>TARUNG SKWELA GARD!! <h1>
+<a href={% url 'rent-create-view'%}>Rent Create </a>
+{% for rent in rent_list %}
+<div> {{rent.renter}} </div>
+<div> {{rent.car}} </div>
+{% endfor %}
+{% endblock %}
